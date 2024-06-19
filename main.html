@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1em;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        label {
+            margin-top: 1em;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+        }
+        button {
+            padding: 1em;
+            margin-top: 1em;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h2>Registration Form</h2>
+
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z]+" title="First name should only contain letters.">
+
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z]+" title="Last name should only contain letters.">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number should be 10 digits long.">
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="qualification">Qualification</label>
+    <input type="text" id="qualification" name="qualification" required>
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
